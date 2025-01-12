@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+:root{
+    /* ## PRIMARY */
+    --RED: hsl(0, 78%, 62%);
+    --CYAN: hsl(180, 62%, 55%);
+    --ORANGE: hsl(34, 97%, 64%);
+    --BLUE: hsl(212, 86%, 64%);
+
+    /* ## NEUTRAL */
+    --VERY-DARK-BLUE: hsl(234, 12%, 34%);
+    --GRAYISH-BLUE: hsl(229, 6%, 66%);
+    --VERY-LIGHT-GRAY: hsl(0, 0%, 98%);
+}
+body{
+    background-color: var(--VERY-LIGHT-GRAY);
+    padding: 6rem 0;
+    font-family: "Poppins", serif;
+}
+h1{
+    margin-bottom: 1rem;
+}
+span{
+    display: block;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: var(--GRAYISH-BLUE);
+    margin-bottom: -0.4rem;
+}
+strong{
+    color: var(--VERY-DARK-BLUE);
+    font-size: 2.4rem;
+}
+p{
+    font-size: 1.4rem;
+    color: var(--GRAYISH-BLUE);
+}
+.desc{
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.desc p{
+    width: 30rem;
+    margin: 0 auto;
+}
+.box{
+    height: 22rem;
+    width: 32rem;
+    min-width: 32rem;
+    max-width: 39rem;
+    padding: 1.6rem;
+    position: relative;
+    border-radius: 0.5rem;
+    margin: 0 auto 1.6rem auto;
+    box-shadow: 0.2rem 0.4rem 1rem var(--GRAYISH-BLUE);
+}
+.box img{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    margin: 1rem;
+}
+h2{
+    font-size: 2rem;
+    color: var(--VERY-DARK-BLUE);
+    margin-bottom: 1rem;
+}
+.one{
+    border-top: 4px solid var(--CYAN);
+}
+.two{
+    border-top: 4px solid var(--RED);
+}
+.three{
+    border-top: 4px solid var(--ORANGE);
+}
+.four{
+    border-top: 4px solid var(--BLUE);
+}
+@media (min-width: 720px) {
+    .cross{
+        display: grid;
+        grid-template-columns: repeat(2, 35rem);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 1.4rem;
+        column-gap: 1.4rem;
+        margin: 6rem auto;
+    }
+    .box{
+        margin: 0 0 1.6rem 0;
+        align-self: center;
+        justify-self: center;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width: 1110px) {
+    .cross{
+        grid-template-columns: repeat(3, 35rem);
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+        margin: auto;
+    }
+    .one{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        position: absolute;
+        top: -50%;
+    }
+    .two{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .three{
+        grid-column: -3/-2;
+        grid-row: 2/3;
+    }
+    .four{
+        grid-column: 3/4;
+        grid-row: -3/-2;
+        position: absolute;
+        top: 50%;
+    }
+}
